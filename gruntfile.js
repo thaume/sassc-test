@@ -9,13 +9,15 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         files: {
-          'public/assets/build/screen.css': 'public/assets/src/css/core/screen.scss'
+          'build/main.css': 'src/main.scss'
         }
       }
     }
   };
 
-  grunt.loadNpmTasks('grunt-sass');
+  // Uncomment here and comment the other task to release the power of sassc
+  //grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Register tasks
   grunt.initConfig(config);
